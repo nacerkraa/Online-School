@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --main: #ffb606;  
+    --bg:#0b1218;
+    --bg-body:#131d28;
+}
+
+*{
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    margin: 0 5px;
+}
+
+
+
+input ,button{
+    outline: none;
+}
+
+/* toggle starting */
+
+.sidebar.hide{
+    width: 65px;
+    transition: all 0.6 ease;
+}
+
+.sidebar .brand h3.hide{
+    display: none;
+}
+
+.sidebar .brand h3.hide{
+    display: none;
+}
+
+.sidebar .side-user.hide{
+    display: none;
+}
+
+.sidebar .side-img.hide{
+    display: none;
+}
+
+.sidemenu .chiox span:last-child.hide {
+    display: none;
+    transition: all 400ms;
+}
+
+.main-content header.hide{
+    left: calc(60px + 1rem);
+}
+
+.main-content.hide{
+    margin-left: 60px;
+}
+
+
+
+/* fin toggleng */
+
+.sidebar{
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--bg);
+    width: 250px;
+    overflow-y: auto;
+    transition: width 300ms;
+}
+
+.sidemenu {
+    padding: .5rem;
+    overflow-y: auto;
+    
+}
+
+.sidebar .brand {
+    padding: .5rem 1rem;
+    display: flex;
+    color: var(--main);
+    align-items: center;
+    height: 70px;
+}
+
+.brand span{
+    font-size: 1.8rem;
+    margin-right: .5rem;
+}
+
+
+.user {
+    text-align: center;
+    color: #fff;
+    margin-top: .5rem;
+}
+
+.user small{
+    display: inline-block;
+    color: var(--main);
+} 
+
+.sidemenu ul li{
+   margin-bottom: .8rem;
+}
+
+.sidemenu ul li a{
+    color: #fff;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all 0.4s ease;
+}
+
+.sidemenu ul li a span:first-child{
+    font-size: 1.3rem;
+    padding: 0rem .6rem;
+}
+
+.sidemenu ul li a.active {
+    background: var(--main);
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.head-icons span{
+    font-size: 1.rem;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+
+/* strat main content stayling */
+
+.main-content{
+    margin-left: 250px;
+    min-height: 100vh;
+    background: var(--bg-body);
+    padding: .5rem 1rem;
+    transition: margin 300ms;
+}
+
+.notification{
+	background: red;
+    font-size: 13px;
+    border-radius: 50%;
+    padding: 3px 5px;
+    position: fixed;
+    top: 26px;
+    right: 123px
+}
+
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+    padding: 0rem 1rem;
+    position: fixed;
+    left: calc(250px + .9rem);
+    right: 1rem;
+    top: .5rem;
+    border-radius: 3px;
+    z-index: 999;
+    transition: left 300ms;
+}
+
+header .head-icons span{
+	cursor: pointer;
+}
+
+.dropDown{
+    display: none;
+    position: absolute;
+    right: 7px;
+    top: 77px;
+    background: rgb(234, 241, 216);
+    border-top: 2px solid var(--main);
+    transition : all 0.6s
+    
+}
+
+.dropDown.show-hide{
+    display: block;
+    top: 66px;
+}
+
+.dropDown li{
+    list-style: none;
+    padding: 0.5rem 0.6rem;
+}
+
+.dropDown li:first-child{
+    border-bottom: 1px solid #999;
+}
+
+.dropDown li a{
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+.dropDown li a:hover{
+    color: #ffb606;
+}
+
+
+
+.menu-toggler{
+    height: 45px;
+    width: 45px;
+    background: var(--main);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    width: 300px;
+    border-radius: 30px;
+    overflow-x: hidden;
+    border: 3px solid #3e454d;
+    align-items: center;
+}
+
+.search span{
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+.search input{
+    flex: 1;
+    height: 45px;
+    border: none;
+    background: transparent;
+    padding: 1rem;
+    color: #fff;
+    
+}
+
+   /* start main stayling */
+
+main{
+    margin-top: calc(70px + .5rem);
+    padding: 1rem 0rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:3rem;
+}
+
+.card {
+    background: var(--bg);
+    padding: 2rem 1rem;
+    border-radius: 3px;
+}
+
+.card-icon{
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.card-icon span {
+    height: 55px;
+    width: 55px;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+}
+
+.follow span{
+    color: #0072f2;
+    background: #e5f3fe;
+}
+
+.ecoles span{
+    color: #ffbc81;
+    background: #fde9ea;
+}
+
+.formateur span{
+    color: #f42a26;
+    background: #fff8e5;
+}
+
+.card-info{
+    text-align: center;
+    margin-top: .6rem;
+}
+
+.card-info h2{
+    font-size: 3rem;
+    color: #efefef;
+}
+
+.card-info small {
+    display: inline-block;
+    color: var(--main);
+    font-weight: 500;
+}
+
+.card-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.3rem;
+    
+    
+}
+
+.card-images div{
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 4px solid #efefef;
+    position: relative;
+    margin-left: -15px;
+}
+
+.card-images div:first-child{
+    margin-left: 0;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 64% auto;
+    margin-top: 3rem;
+    grid-gap: 2.5rem;
+}
+
+.chat-follow,.chart-sales{
+    background: var(--bg);
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:  #efefef;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1rem;
+}
+
+
+.close-mobile-menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: 0;
+    background: transparent;
+    z-index: 100;
+    transition: width 300ms;
+}
+
+
+/* start gere les inscription stayling */
+.details{
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.details .resentOrdres{
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #0b1218;
+    color: #efefef;
+    padding: 40px;
+}
+
+.details .resentOrdres .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details .resentOrdres .card-header h2{
+    font-weight: 600;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td{
+    font-weight: 600;
+}
+
+.details .resentOrdres table tr{
+    border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+    transition: all 300ms ease;
+    
+}
+
+.details .resentOrdres table tbody tr:last-child{
+    border-bottom: none;
+}
+
+
+
+details .resentOrdres table tr td{
+    padding: 9px 5px;
+}
+
+.details .resentOrdres table thead tr td:last-child,
+.details .resentOrdres table tbody tr td:last-child{
+    text-align: right;
+}
+
+.details .resentOrdres table thead tr td:nth-child(2),
+.details .resentOrdres table tbody tr td:nth-child(2){
+    text-align: right;
+    padding-right: 20px;
+}
+
+.details .resentOrdres table thead tr td:nth-child(3),
+.details .resentOrdres table tbody tr td:nth-child(3){
+    text-align: center;
+}
+
+.action{
+    position: relative;
+    padding: 8px 15px;
+    background: forestgreen;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.action:hover{
+	opacity:0.7;
+}
+
+.action a{
+    color: #fde9ea;
+}
+
+.suprimer{
+    background: #f42a26;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start media query */
+
+@media only screen and (max-width:1124px) {
+
+    .close-mobile-menu{
+        display: block;
+        width: 0px;
+       
+    }
+ 
+
+    .close-mobile-menu.toggle-mobile{
+        display: block;
+        width: calc(100% - 250px);
+        transition: width 300ms;
+    }
+
+    .sidebar .brand h3{
+        display: none;
+    }
+
+    .sidebar{
+        width: 60px;
+        z-index: 999;
+    }
+
+    .sidemenu .chiox span:last-child {
+        display: none;
+        transition: all 400ms;
+    }
+
+    .main-content header{
+        left: calc(60px + 1rem);
+    }
+    
+    .main-content{
+        margin-left: 60px;
+    }
+
+
+    /* this toggle */
+    .sidebar .brand h3.hide{
+        display: block;
+    }
+
+
+    .sidebar .user.hide{
+        display: block;
+    }
+
+    .sidemenu .chiox span:last-child.hide {
+        display: inline-block;
+        transition: all 400ms;
+    }
+    
+
+    .sidebar.hide{
+        width: 250px;
+        transition: all 0.6 ease;
+        z-index: 9999;
+    }
+    
+    
+    .main-content header.hide{
+        left: calc(250px + .9rem);
+    }
+    
+    .main-content.hide{
+        margin-left: 60px;
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chart-grid{
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 630px) {
+    .cards{
+        grid-template-columns: 100%;
+    }
+
+}

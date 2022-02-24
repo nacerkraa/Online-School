@@ -1,0 +1,949 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --main: #ffb606;  
+    --bg:#0b1218;
+    --bg-body:#131d28;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* all similair stayling code */
+
+.formation, .ecoles{
+    color:#fff;
+    background: #111;
+}
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .formation, .offres, .ecoles, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.offres .offres-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formation .title::before,
+.ecoles .title::before{
+    background: #fff;
+}
+.formation .title::after,
+.ecoles .title::after{
+    background: #111;
+    content: "les informations populaires";
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: var(--main);
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* nav bar stayling  */
+
+
+
+.navbar {
+    position: fixed;
+    padding: 30px 0;
+    /* background-color: var(--main); */
+    z-index: 999;
+    width: 100%;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background-color: var(--main);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: var(--main);
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: var(--main);
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu button stayling */
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    background: var(--main);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropDown{
+    display: none;
+    position: absolute;
+    right: 55px;
+    top: 77px;
+    background: rgb(234, 241, 216);
+    
+}
+
+.dropDown.show-hide{
+    display: block;
+}
+
+.dropDown li{
+    list-style: none;
+    padding: 0.5rem 0.6rem;
+}
+
+.dropDown li:first-child{
+    border-bottom: 1px solid #999;
+}
+
+.dropDown li a{
+    color: #222;
+    transition: color 0.3s ease;
+}
+
+.dropDown li a:hover{
+    color: #ffb606;
+}
+
+
+.hide-dropdown{
+    position: fixed;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.hide-dropdown.active{
+    display: block;
+}
+
+/* home section styling  */
+
+.home{
+    display: flex;
+    background: url("../images/alice.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 500px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+
+.home .max-width{
+    
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+
+.home .home-content .text-2{
+    font-size: 65px;
+    font-weight: bold;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: var(--main);
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    color: #fff;
+    background: var(--main);
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--main);
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: var(--main);
+    background:none;
+}
+
+
+
+/* about section starting */
+
+
+.about,.offres-emp {
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.about .title::after{
+    content: 'qui est nous';
+}
+.about .about-content,.offres-emp .offr-emp-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color:var(--main)
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    color: #fff;
+    background: var(--main);
+    font-size: 25px;
+    font-weight: 500;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--main);
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: var(--main);
+    background: none;
+}
+
+/* start les formation stayling */
+
+
+.formations .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 35px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* les formation section stayling */
+
+
+
+.formation .title::after{
+    content: "tous les formations";
+}
+
+.formation .owl-carousel {
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.formation .owl-carousel .card{
+	font-family: 'Ubuntu',sans-serif;
+    background: rgb(22, 21, 21);
+    border-radius: 6px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+}
+.formation .owl-carousel .card:hover{
+    opacity: 0.7;
+	cursor: pointer;
+	
+	border-radius: 6px;
+}
+
+.formation .owl-carousel .card a{
+	color:#fff;
+}
+
+.formation .owl-carousel .card div{
+	padding:10px 5px;
+	font-size: 19px;
+}
+
+
+.formation .owl-carousel .card .header{
+	background: #33a5c7;
+	height: 100px;
+	line-height: 100px;
+	font-weight: 900;
+	font-size: 25px;
+}
+
+
+ 
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    width: 13px;
+    height: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid var(--main)!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: var(--main)!important;
+}
+
+
+
+.formation .load-more {
+	font-family: 'Poppins',sans-serif;
+    background: var(--main);
+    font-size: 25px;
+    padding: 12px 36px;
+    border-radius: 6px;
+    border: 2px solid var(--main);
+    transition: all 0.3s ease;
+	width: 250px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.formation .load-more a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.formation .load-more:hover a,
+.formation .load-more:hover{
+	color: var(--main);
+	background: none;
+}
+
+/* les offres d'emploi section styling */
+
+.offres .offres-content {
+    align-items: initial;
+}
+
+.offres .title::after{
+    content: "what i know";
+}
+.offres .offres-content .column{
+    width: calc(50% - 30px);
+}
+.offres .offres-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+.offres .offres-content .left p{
+    text-align: justify;
+}
+.offres .offres-content .left a{
+    display: inline-block;
+    background: var(--main);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--main);
+    transition: all 0.3s ease;
+}
+.offres .offres-content .left a:hover{
+    color: var(--main);
+    background: none;
+}
+
+
+
+.offres .offres-content .right .offre-card{
+    border: 1px solid thistle;
+    border-left: 6px solid var(--main);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.offres .offres-content .right .offre-card i{
+    color: var(--main);
+}
+
+.offres .offres-content .right .offre-card .head-card,
+.offres .offres-content .right .offre-card .footer-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #575757;
+    font-size: 14.23px;
+}
+
+.offres .offres-content .right .offre-card .head-card .type-offre{
+    display: inline-block;
+    color: #155799;
+    font-size: 18px;
+    margin-left: auto;
+    font-weight: 700;
+}
+
+
+.offres .offres-content .right .offre-card .offre-desc{
+    color: #2b2b2b;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
+
+
+
+
+
+/* les ecoles section stayling */
+.ecoles .title::after{
+    content: "tous les écoles";
+}
+
+.ecoles .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+    
+}
+.ecoles .carousel .card:hover{
+   
+}
+
+.ecoles .carousel .card .box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    
+}
+.ecoles .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+
+.ecoles .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    
+}
+
+.ecoles .carousel .card a{
+	color:#fff;
+}
+
+.ecoles .carousel .card .head{
+	 background: var(--main);
+	 height: 100%;
+	padding: 60px 60px;
+	max-width: 100%;
+}
+
+.ecoles .carousel .card .content{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecoles .carousel .card .content .posistion{
+	color: #9790F2;
+}
+
+
+
+
+ 
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    width: 13px;
+    height: 13px;
+    outline: none!important;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid var(--main)!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: var(--main)!important;
+}
+
+
+/* contact start stayling */
+
+.contact{
+    background: url("../images/bach.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.contact .title::after{
+    content: "";
+    background: none;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: var(--main);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: rgb(218, 218, 218);
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;  
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--main);
+    background: var(--main);
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: var(--main);
+    background: none;
+}
+
+/* start footer staylig */
+
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: var(--main);
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive media query start */
+
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px; 
+        /* 1680 800 */
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        background-color: #111;
+        text-align: center;
+        padding-top: 90px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 35px;
+      
+    }
+
+    .home .home-content a {
+        font-size: 23px;
+        padding: 10px 20px;
+    }
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 100%;
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right{
+        flex: 100%;
+    }
+
+    .formations .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .offres .offres-content .column,.contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+  
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 40px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+      
+    }
+
+    .home .home-content a {
+        font-size: 20px;
+    }
+    .formations .serv-content .card{
+        width: 100%;
+    }
+
+    section .title::after{
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 27px;
+      
+    }
+}
+

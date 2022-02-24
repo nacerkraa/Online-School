@@ -1,0 +1,41 @@
+.details .resentOrdres #form1{
+	background:#36b9cc;
+	width:60%;
+	margin: auto;
+	text-align: center;
+	padding: 15px 0;
+	border-radius: 6px;
+}
+
+.details .resentOrdres #form1 div{
+	margin:5px 0;
+}
+
+.details .resentOrdres #form1 input{
+	width: 90%;
+	margin: auto;
+	padding: 12px 20px;
+	
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+ 
+  box-sizing: border-box;
+}
+
+.details .resentOrdres #form1 select{
+	width: 90%;
+	margin: auto;
+	padding: 12px 20px;
+}
+
+textarea {
+	width: 90%;
+	padding: 15px 20px
+}
+
+.submit{
+	
+}

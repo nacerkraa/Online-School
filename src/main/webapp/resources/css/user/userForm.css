@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --main: #ffb606;
+    --bg:#fff;
+    --bg-body:#f8f9fc;
+    --bg-side:#4e73df;
+    --font-color:#131d28;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+body{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,var(--main),#9b59b6);
+
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    
+  }
+  .container h2{
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+  } 
+  .container h2::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: 0;
+      height: 3px;
+      width: 30px;
+      background: linear-gradient(135deg,var(--main),#9b59b6);
+  }
+  .container form .user-details{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    margin:20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    
+}
+.user-details .input-box input ,select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid ,
+select:focus,select:valid{
+    border-color: #9b59b6;
+}
+form .user-details .input-box_f{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    display:none;
+}
+.user-details .input-box_f .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    
+}
+.user-details .input-box_f input {
+   
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box_N{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 20px 82px 0 1px;
+}
+form .button input{
+    height: 100%;
+    width: 300%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,var(--main),#9b59b6);
+    transition:all 0.6s;
+    cursor: pointer;
+}
+form .button input:hover{
+    background: linear-gradient(-135deg,var(--main),#9b59b6);
+}
+
+.button a{
+	height: 100%;
+	line-height:45px;
+    width: 200%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,var(--main),#9b59b6);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition:all 0.6s;
+    cursor: pointer
+	
+}
+
+.button a:hover{
+    background: linear-gradient(-135deg,var(--main),#9b59b6);
+}
+
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y:scroll ;
+    }
+}
+.container .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border:1px solid lightgrey;
+}
+.slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer ;
+}
+.slide-controls .signup{
+    color:#000;
+}
+.slide-controls .slide-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left:0;
+    z-index:0;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+    background: var(--main);
+}
+input[type="radio"]{
+    display: none;
+}
+#signup:checked ~ .slide-tab{
+    left:50%;
+}
+#signup:checked ~ .signup{
+    color: #fff;
+}
+#signup:checked ~ .login{
+    color: #000;
+}
+
+
+.container2{
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container2 .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.input-box input {
+    height: 45px;
+    width: 200%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.input-box input:focus ,.input-box input:valid
+{
+    border-color: #9b59b6;
+}
+
+
+form .buttn{
+    height: 45px;
+    margin: 5px 5px;
+}
+form .buttn input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,var(--main),#9b59b6);
+    transition:all 0.6s;
+    cursor: pointer;
+}
+form .buttn input:hover{
+    background: linear-gradient(-135deg,var(--main),#9b59b6);
+}
+
+.buttn a{
+	height: 45px;
+     height: 100%;
+    width: 100%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 5px;
+    background: linear-gradient(135deg,var(--main),#9b59b6);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    margin: 8px 0;
+    transition:all 0.6s;
+    cursor: pointer
+    
+}
+
+.buttn a:hover{
+    background: linear-gradient(-135deg,var(--main),#9b59b6);
+}
+
+.container .inner{
+   display: flex;
+   width: 100%;
+}
+
+.container2{
+    margin-right: -430px;
+    width: 64%;
+    margin-left: 146px;
+   
+}
+.container2{
+    display: none;
+}
+form .button input:active .container2{
+    display: block;
+}
+.container .inner{
+   display: flex;
+   width: 100%;
+}
+
+.container2{
+    margin-right: -430px;
+    width: 64%;
+    margin-left: 146px;
+   
+}
+.container2{
+    display: none;
+}
+form .button input:active .container2{
+    display: block;
+}
+.container .inner {
+    margin-left : -120%;
+    display:none;
+}
+.container{
+    max-Width: 404px;
+}
+div.container2{
+    display:block;
+    margin-right : 113px;
+    width:111%;
+    margin-left :-10px;
+}

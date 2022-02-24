@@ -1,0 +1,160 @@
+body{
+    background: #f9f9f9;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #444;
+}
+
+.container {
+    width: 80%;
+    margin:  auto;
+}
+
+.container .form {
+
+    width: 50%;
+    margin: 20px auto;
+    background: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 9px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.container .form label {
+    font-weight: 600;
+}
+.container .form h2 {
+    color:crimson;
+    margin-bottom: 20px;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+.payment img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 35%;
+    height: 85px;
+    border: 1px solid #222;
+}
+
+
+
+.filed{
+    margin: 55px 0;
+   
+}
+
+.pass{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pass div:first-child{
+    width: 55%;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+.submit{
+    background-color: crimson;
+    color: #fff;
+    font-weight: 700;
+    font-size: larger;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: opacity 0.6s;
+    padding: 13px 26px;
+    width: 40%;
+
+}
+
+.submit:hover{
+    
+    opacity: 0.7;
+    
+}
+
+.form a{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: crimson;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 15px;
+    width: 40%;
+}
+
+.form a:hover{
+    
+    opacity: 0.7;
+    
+}
+
+.footer{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 890px) {
+
+    .pass{
+        display: block;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .pass div:first-child {
+        width: 100%;
+    }
+
+    .pass div input{
+        display: block;
+        width: 100%;
+    }
+
+    .pass div{
+        display: block;
+       margin-bottom: 15px;
+    }
+
+    .container .form {
+        width: 100%;
+        
+    }
+}
