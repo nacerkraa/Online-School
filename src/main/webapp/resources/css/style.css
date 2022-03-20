@@ -183,7 +183,6 @@ section .title::after{
 }
 
 .scroll-up-btn.show{
-    
     bottom: 30px;
     opacity: 1;
     pointer-events: auto;
@@ -234,7 +233,7 @@ section .title::after{
     display: block;
 }
 
-/* home section styling  */
+/* Home section styling  */
 
 .home{
     display: flex;
