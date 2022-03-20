@@ -14,9 +14,7 @@
     text-decoration: none;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+html{scroll-behavior: smooth}
 
 .max-width {
     max-width: 1300px;
@@ -24,7 +22,7 @@ html{
     margin: auto;
 }
 
-/* all similair stayling code */
+/* all the similair stayling code */
 
 .formation, .ecoles{
     color:#fff;
@@ -91,7 +89,7 @@ section .title::after{
     transform: translateX(-50%);
 }
 
-/* nav bar stayling  */
+/* navbar stayling  */
 
 
 
@@ -574,7 +572,7 @@ section .title::after{
 
 /* les ecoles section stayling */
 .ecoles .title::after{
-    content: "tous les écoles";
+    content: "tous les Ã©coles";
 }
 
 .ecoles .carousel .card{
